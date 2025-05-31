@@ -1,0 +1,23 @@
+{
+  "name": "aihub",
+  "private": true,
+  "packageManager": "yarn@4.9.1",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "dependencies": {
+    "react": "18",
+    "react-dom": "18"
+  },
+  "devDependencies": {
+    "@types/react": "18",
+    "@types/react-dom": "18",
+    "concurrently": "^9.1.2"
+  },
+  "scripts": {
+    "start:client": "yarn workspace aihub-client start",
+    "start:server": "yarn workspace aihub-server start",
+    "start:all": "concurrently \"yarn start:server\" \"yarn start:client\""
+  }
+}
