@@ -1,23 +1,39 @@
 {
   "name": "aihub",
+  "version": "1.0.0",
   "private": true,
-  "packageManager": "yarn@4.9.1",
-  "workspaces": [
-    "client",
-    "server"
-  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "react": "18",
-    "react-dom": "18"
+    "react-dom": "18",
+    "react-scripts": "5",
+    "typescript": "^4.4.2"
   },
   "devDependencies": {
     "@types/react": "18",
-    "@types/react-dom": "18",
-    "concurrently": "^9.1.2"
+    "@types/react-dom": "18"
   },
-  "scripts": {
-    "start:client": "yarn workspace aihub-client start",
-    "start:server": "yarn workspace aihub-server start",
-    "start:all": "concurrently \"yarn start:server\" \"yarn start:client\""
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
